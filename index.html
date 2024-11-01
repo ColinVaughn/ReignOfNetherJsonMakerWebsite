@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reign of Nether JSON Maker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Reign of Nether JSON Maker</h1>
+  <label for="name">Name:</label>
+  <input type="text" id="name" />
+
+  <label for="players">Players (Only Accepts Ints):</label>
+  <input type="text" id="players" />
+  <span class="error-message" id="players-error"></span>
+
+  <label for="description">Description (Max 150 chars):</label>
+  <textarea id="description" rows="3"></textarea>
+  <span class="error-message" id="description-error"></span>
+
+  <label for="fileName">File Name (only a-z and _ are allowed):</label>
+  <input type="text" id="fileName" />
+  <span class="error-message" id="fileName-error"></span>
+
+  <label for="imageName">Image Name (e.g., your_image.png):</label>
+  <input type="text" id="imageName" />
+
+  <div id="gamerules-container">
+    <h3>Gamerules</h3>
+    <button onclick="addGamerule()">Add Gamerule</button>
+  </div>
+
+  <button onclick="loadJson()">Load JSON</button>
+  <button onclick="saveJson()">Save as JSON</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
